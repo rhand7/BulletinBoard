@@ -12,6 +12,11 @@
 		2A3C59301EAFAB98002F7D3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3C592F1EAFAB98002F7D3B /* Assets.xcassets */; };
 		2A3C59331EAFAB98002F7D3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3C59311EAFAB98002F7D3B /* LaunchScreen.storyboard */; };
 		2A3C593F1EAFB0DD002F7D3B /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C593E1EAFB0DD002F7D3B /* PostListTableViewController.swift */; };
+		2A3C59411EAFB1E3002F7D3B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59401EAFB1E3002F7D3B /* Post.swift */; };
+		2A3C59431EAFB2A2002F7D3B /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59421EAFB2A2002F7D3B /* PostController.swift */; };
+		2A3C59461EAFB37A002F7D3B /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59451EAFB37A002F7D3B /* CloudKitManager.swift */; };
+		2A3C594A1EAFB678002F7D3B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A3C59491EAFB678002F7D3B /* CloudKit.framework */; };
+		2A3C594C1EAFBCD2002F7D3B /* Post+CloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C594B1EAFBCD2002F7D3B /* Post+CloudKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,12 @@
 		2A3C59321EAFAB98002F7D3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A3C59341EAFAB98002F7D3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A3C593E1EAFB0DD002F7D3B /* PostListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
+		2A3C59401EAFB1E3002F7D3B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		2A3C59421EAFB2A2002F7D3B /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		2A3C59451EAFB37A002F7D3B /* CloudKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		2A3C59471EAFB676002F7D3B /* BulletinBoard2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BulletinBoard2.entitlements; sourceTree = "<group>"; };
+		2A3C59491EAFB678002F7D3B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		2A3C594B1EAFBCD2002F7D3B /* Post+CloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Post+CloudKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A3C594A1EAFB678002F7D3B /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +52,7 @@
 			children = (
 				2A3C59271EAFAB98002F7D3B /* BulletinBoard2 */,
 				2A3C59261EAFAB98002F7D3B /* Products */,
+				2A3C59481EAFB678002F7D3B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,8 +67,10 @@
 		2A3C59271EAFAB98002F7D3B /* BulletinBoard2 */ = {
 			isa = PBXGroup;
 			children = (
+				2A3C59471EAFB676002F7D3B /* BulletinBoard2.entitlements */,
 				2A3C59281EAFAB98002F7D3B /* AppDelegate.swift */,
 				2A3C592C1EAFAB98002F7D3B /* Main.storyboard */,
+				2A3C59441EAFB35B002F7D3B /* CloudKit */,
 				2A3C593D1EAFABEF002F7D3B /* Models */,
 				2A3C593C1EAFABE1002F7D3B /* ModelControllers */,
 				2A3C593B1EAFABD7002F7D3B /* ViewControllers */,
@@ -86,6 +101,7 @@
 		2A3C593C1EAFABE1002F7D3B /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A3C59421EAFB2A2002F7D3B /* PostController.swift */,
 			);
 			name = ModelControllers;
 			path = ..;
@@ -94,9 +110,27 @@
 		2A3C593D1EAFABEF002F7D3B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2A3C59401EAFB1E3002F7D3B /* Post.swift */,
+				2A3C594B1EAFBCD2002F7D3B /* Post+CloudKit.swift */,
 			);
 			name = Models;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		2A3C59441EAFB35B002F7D3B /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				2A3C59451EAFB37A002F7D3B /* CloudKitManager.swift */,
+			);
+			name = CloudKit;
+			sourceTree = "<group>";
+		};
+		2A3C59481EAFB678002F7D3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A3C59491EAFB678002F7D3B /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +167,14 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = WC4MWVKQFQ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -172,8 +214,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A3C59411EAFB1E3002F7D3B /* Post.swift in Sources */,
+				2A3C59431EAFB2A2002F7D3B /* PostController.swift in Sources */,
+				2A3C594C1EAFBCD2002F7D3B /* Post+CloudKit.swift in Sources */,
 				2A3C59291EAFAB98002F7D3B /* AppDelegate.swift in Sources */,
 				2A3C593F1EAFB0DD002F7D3B /* PostListTableViewController.swift in Sources */,
+				2A3C59461EAFB37A002F7D3B /* CloudKitManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +342,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BulletinBoard2/BulletinBoard2.entitlements;
 				DEVELOPMENT_TEAM = WC4MWVKQFQ;
 				INFOPLIST_FILE = BulletinBoard2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -309,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BulletinBoard2/BulletinBoard2.entitlements;
 				DEVELOPMENT_TEAM = WC4MWVKQFQ;
 				INFOPLIST_FILE = BulletinBoard2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
